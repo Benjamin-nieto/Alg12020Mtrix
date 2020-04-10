@@ -13,7 +13,7 @@ import javax.swing.JTable;
  */
 public class Metodo {
 
-    public static int[][] matriz_aleatoria(int filas, int cols) {
+    public static int[][] matrizAleatoria(int filas, int cols) {
         int[][] m = new int[filas][cols];
         System.out.println("" + m.length);
         for (int i = 0; i < m.length; i++) {
@@ -40,7 +40,7 @@ public class Metodo {
 
     }
 
-    public static void vaciar_tble(int[][] m, JTable table) {
+    public static void vaciarTble(int[][] m, JTable table) {
 
         for (int i = 0; i < m.length; i++) {
             for (int j = 0; j < m[0].length; j++) {
@@ -50,7 +50,7 @@ public class Metodo {
 
     }
 
-    public static void diag_principal(int[][] m, JTable table) {
+    public static void diagPrincipal(int[][] m, JTable table) {
         for (int i = 0; i < m.length; i++) { // filas
             for (int j = 0; j < m[0].length; j++) { // columnas
                 if (i == j) {
@@ -61,7 +61,7 @@ public class Metodo {
         }
     }
 
-    public static void diag_sec(int[][] m, JTable table) {
+    public static void diagSec(int[][] m, JTable table) {
 
         for (int i = 0; i < m.length; i++) { // filas
             for (int j = 0; j < m[0].length; j++) { // columnas
@@ -73,7 +73,7 @@ public class Metodo {
         }
     }
 
-    public static void triangular_sup(int[][] m, JTable table) {
+    public static void triangularSup(int[][] m, JTable table) {
 
         for (int i = 0; i < m.length; i++) { // filas
             for (int j = 0; j < m[0].length; j++) { // columnas
@@ -85,7 +85,7 @@ public class Metodo {
         }
     }
 
-    public static void triangular_inf(int[][] m, JTable table) {
+    public static void triangularInf(int[][] m, JTable table) {
 
         for (int i = 0; i < m.length; i++) { // filas
             for (int j = 0; j < m[0].length; j++) { // columnas
@@ -96,8 +96,8 @@ public class Metodo {
             }
         }
     }
-    
-    public static void transpuesta(int[][] m,JTable table){
+
+    public static void transpuesta(int[][] m, JTable table) {
         for (int i = 0; i < m.length; i++) { // filas
             for (int j = 0; j < m[0].length; j++) { // columnas
                 if (i != j || i == j) {
@@ -106,10 +106,19 @@ public class Metodo {
 
             }
         }
-        
-        
+
     }
-    
-    
-    
+
+    public static void letraA(int[][] m, JTable table) {
+        for (int i = 0; i < m.length; i++) { // filas
+            for (int j = 0; j < m[0].length; j++) { // columnas
+                if (i != j || i == j) {
+                    table.setValueAt(m[i][j], j, i);
+                }
+
+            }
+        }
+
+    }
+
 }

@@ -187,7 +187,7 @@ public class Principal extends javax.swing.JFrame {
 
     private void btnLlenarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLlenarActionPerformed
 
-        mInit = Metodo.matriz_aleatoria(row, cols); // llena la matriz aleatoriamente
+        mInit = Metodo.matrizAleatoria(row, cols); // llena la matriz aleatoriamente
         Metodo.llenar(mInit, tblInicial); // la matriz que insertara en el default table
 
 
@@ -197,12 +197,12 @@ public class Principal extends javax.swing.JFrame {
         // TODO add your handling code here:
         int op = cmbOpcion.getSelectedIndex();
 
-        Metodo.vaciar_tble(mInit, tblFinal); // vaciamos tabla para llenar limpiamente
+        Metodo.vaciarTble(mInit, tblFinal); // vaciamos tabla para llenar limpiamente
         switch (op) {
             case 0: // principal
                 if (cols == row) {
                     int[][] diagp = mInit;
-                    Metodo.diag_principal(diagp, tblFinal);
+                    Metodo.diagPrincipal(diagp, tblFinal);
                     break;
                 } else {
                     JOptionPane.showMessageDialog(this, "cantidad de columnas y filas diferentes.\n", "Columnas y filas", NORMAL);
@@ -211,7 +211,7 @@ public class Principal extends javax.swing.JFrame {
             case 1: // secundaria
                 if (cols == row) {
                     int[][] diags = mInit;
-                    Metodo.diag_sec(diags, tblFinal);
+                    Metodo.diagSec(diags, tblFinal);
                     break;
                 } else {
                     JOptionPane.showMessageDialog(this, "cantidad de columnas y filas diferentes.\n", "Columnas y filas", NORMAL);
@@ -220,7 +220,7 @@ public class Principal extends javax.swing.JFrame {
             case 2: // triangular superior
                 if (cols == row) {
                     int[][] trians = mInit;
-                    Metodo.triangular_sup(trians, tblFinal);
+                    Metodo.triangularSup(trians, tblFinal);
                     break;
                 } else {
                     JOptionPane.showMessageDialog(this, "cantidad de columnas y filas diferentes.\n", "Columnas y filas", NORMAL);
@@ -229,7 +229,7 @@ public class Principal extends javax.swing.JFrame {
             case 3: // triangular inferior
                 if (cols == row) {
                     int[][] triani = mInit;
-                    Metodo.triangular_inf(triani, tblFinal);
+                    Metodo.triangularInf(triani, tblFinal);
                     break;
                 } else {
                     JOptionPane.showMessageDialog(this, "cantidad de columnas y filas diferentes.\n", "Columnas y filas", NORMAL);
@@ -239,6 +239,15 @@ public class Principal extends javax.swing.JFrame {
                 if (cols == row) {
                     int[][] trans = mInit;
                     Metodo.transpuesta(trans, tblFinal);
+                    break;
+                } else {
+                    JOptionPane.showMessageDialog(this, "cantidad de columnas y filas diferentes.\n", "Columnas y filas", NORMAL);
+                    break;
+                }
+            case 5: // Letra A
+                if (cols == row) {
+                    int[][] trans = mInit;
+                    Metodo.letraA(trans, tblFinal);
                     break;
                 } else {
                     JOptionPane.showMessageDialog(this, "cantidad de columnas y filas diferentes.\n", "Columnas y filas", NORMAL);
@@ -275,8 +284,8 @@ public class Principal extends javax.swing.JFrame {
         txtFila.setText("");
         txtColumn.setText("");
         mInit = new int[0][0];
-        Metodo.vaciar_tble(mInit, tblInicial);
-        Metodo.vaciar_tble(mInit, tblFinal);
+        Metodo.vaciarTble(mInit, tblInicial);
+        Metodo.vaciarTble(mInit, tblFinal);
 
         DefaultTableModel dtbl1, dtbl2;
 
