@@ -4,10 +4,10 @@ Realizar los métodos acompañados de la interfaz gráfica vista en clases que d
 
     plus: prinpical.
 
-       ![principal](resources/img/principal.png)
+![principal](resources/img/principal.png)
 
     1. Dada una matriz de n x n retorne una matriz donde solo muestre los elementos de la diagonal secundaria.
-        ![principal](resources/img/secundary.png)
+![principal](resources/img/secundary.png)
 
     2. Dada una matrix de n x n retorne una matriz donde solo muestre los elementos de la triangular superior.
 
