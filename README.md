@@ -16,7 +16,8 @@ Realizar los métodos acompañados de la interfaz gráfica vista en clases que d
 ![triangular_inf](resources/img/trian_inf.png)
 
     4. Dada una matrix de n x m retorne una matriz donde muestre la matriz traspuesta a la ingresada.
-    
+![transpuesta](resources/img/transp.png)
+
     5. Dada una matriz de n x m retorne una matriz con los elementos que conforman la letra A.
     
     6. Dada una matriz de n x m retorne una matriz con los elementos que conforman la letra Z.

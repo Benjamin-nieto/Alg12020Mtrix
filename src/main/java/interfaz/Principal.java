@@ -210,8 +210,8 @@ public class Principal extends javax.swing.JFrame {
                 }
             case 1: // secundaria
                 if (cols == row) {
-                    int[][] diagp = mInit;
-                    Metodo.diag_sec(diagp, tblFinal);
+                    int[][] diags = mInit;
+                    Metodo.diag_sec(diags, tblFinal);
                     break;
                 } else {
                     JOptionPane.showMessageDialog(this, "cantidad de columnas y filas diferentes.\n", "Columnas y filas", NORMAL);
@@ -219,8 +219,8 @@ public class Principal extends javax.swing.JFrame {
                 }
             case 2: // triangular superior
                 if (cols == row) {
-                    int[][] diagp = mInit;
-                    Metodo.triangular_sup(diagp, tblFinal);
+                    int[][] trians = mInit;
+                    Metodo.triangular_sup(trians, tblFinal);
                     break;
                 } else {
                     JOptionPane.showMessageDialog(this, "cantidad de columnas y filas diferentes.\n", "Columnas y filas", NORMAL);
@@ -228,8 +228,17 @@ public class Principal extends javax.swing.JFrame {
                 }
             case 3: // triangular inferior
                 if (cols == row) {
-                    int[][] diagp = mInit;
-                    Metodo.triangular_inf(diagp, tblFinal);
+                    int[][] triani = mInit;
+                    Metodo.triangular_inf(triani, tblFinal);
+                    break;
+                } else {
+                    JOptionPane.showMessageDialog(this, "cantidad de columnas y filas diferentes.\n", "Columnas y filas", NORMAL);
+                    break;
+                }
+            case 4: // transpuesta
+                if (cols == row) {
+                    int[][] trans = mInit;
+                    Metodo.transpuesta(trans, tblFinal);
                     break;
                 } else {
                     JOptionPane.showMessageDialog(this, "cantidad de columnas y filas diferentes.\n", "Columnas y filas", NORMAL);
