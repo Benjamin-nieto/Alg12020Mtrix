@@ -90,7 +90,7 @@ public class Principal extends javax.swing.JFrame {
                 btnCrearActionPerformed(evt);
             }
         });
-        jPanel2.add(btnCrear, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 100, -1));
+        jPanel2.add(btnCrear, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 90, -1));
 
         btnLlenar.setText("Llenar");
         btnLlenar.addActionListener(new java.awt.event.ActionListener() {
@@ -98,7 +98,7 @@ public class Principal extends javax.swing.JFrame {
                 btnLlenarActionPerformed(evt);
             }
         });
-        jPanel2.add(btnLlenar, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 30, 100, -1));
+        jPanel2.add(btnLlenar, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, 90, -1));
 
         btnLimpiar.setText("Limpiar");
         btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
@@ -106,7 +106,7 @@ public class Principal extends javax.swing.JFrame {
                 btnLimpiarActionPerformed(evt);
             }
         });
-        jPanel2.add(btnLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(184, 30, 99, -1));
+        jPanel2.add(btnLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 30, 90, -1));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 60, 290, 90));
 
@@ -138,7 +138,7 @@ public class Principal extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 160, 190, 230));
 
-        cmbOpcion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Diagonal Principal.", "Diagonal Secundaria.", "Triangular superior.", "Transpuesta.", "Formar letra A.", "Formar letra Z.", "Formar letra T.", "Formar letra V.", "Formar letra E.", "Formar letra F.", "Formar letra P.", "Formar letra I.", "Formar letra N.", "Formar letra Y.", "Formar letra X." }));
+        cmbOpcion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Diagonal Principal.", "Diagonal Secundaria.", "Triangular superior.", "Triangular inferior.", "Transpuesta.", "Formar letra A.", "Formar letra Z.", "Formar letra T.", "Formar letra V.", "Formar letra E.", "Formar letra F.", "Formar letra P.", "Formar letra I.", "Formar letra N.", "Formar letra Y.", "Formar letra X." }));
         getContentPane().add(cmbOpcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 180, 180, -1));
 
         btnAccion.setText("Acción");
@@ -196,33 +196,51 @@ public class Principal extends javax.swing.JFrame {
     private void btnAccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAccionActionPerformed
         // TODO add your handling code here:
         int op = cmbOpcion.getSelectedIndex();
+
+        Metodo.vaciar_tble(mInit, tblFinal); // vaciamos tabla para llenar limpiamente
         switch (op) {
-            case 0:
+            case 0: // principal
                 if (cols == row) {
-                   int[][] diagp = mInit;
-                   diagp = Metodo.diag_principal(diagp);
-                   Metodo.llenar(diagp, tblFinal);
-                   break;
+                    int[][] diagp = mInit;
+                    Metodo.diag_principal(diagp, tblFinal);
+                    break;
                 } else {
-                   JOptionPane.showMessageDialog(this,"cantidad de columnas y filas diferentes.\n","Columnas y filas",NORMAL);
-                   break;
+                    JOptionPane.showMessageDialog(this, "cantidad de columnas y filas diferentes.\n", "Columnas y filas", NORMAL);
+                    break;
                 }
-            case 1:
+            case 1: // secundaria
                 if (cols == row) {
-                   int[][] diagp = mInit;
-                   diagp = Metodo.diag_sec(diagp);
-                   Metodo.llenar(diagp, tblFinal);
-                   break;
+                    int[][] diagp = mInit;
+                    Metodo.diag_sec(diagp, tblFinal);
+                    break;
                 } else {
-                   JOptionPane.showMessageDialog(this,"cantidad de columnas y filas diferentes.\n","Columnas y filas",NORMAL);
-                   break;
+                    JOptionPane.showMessageDialog(this, "cantidad de columnas y filas diferentes.\n", "Columnas y filas", NORMAL);
+                    break;
                 }
-                
+            case 2: // triangular superior
+                if (cols == row) {
+                    int[][] diagp = mInit;
+                    Metodo.triangular_sup(diagp, tblFinal);
+                    break;
+                } else {
+                    JOptionPane.showMessageDialog(this, "cantidad de columnas y filas diferentes.\n", "Columnas y filas", NORMAL);
+                    break;
+                }
+            case 3: // triangular inferior
+                if (cols == row) {
+                    int[][] diagp = mInit;
+                    Metodo.triangular_inf(diagp, tblFinal);
+                    break;
+                } else {
+                    JOptionPane.showMessageDialog(this, "cantidad de columnas y filas diferentes.\n", "Columnas y filas", NORMAL);
+                    break;
+                }
+
         }
     }//GEN-LAST:event_btnAccionActionPerformed
 
     private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
-        
+
         limpiar_template();
     }//GEN-LAST:event_btnLimpiarActionPerformed
 
@@ -248,6 +266,8 @@ public class Principal extends javax.swing.JFrame {
         txtFila.setText("");
         txtColumn.setText("");
         mInit = new int[0][0];
+        Metodo.vaciar_tble(mInit, tblInicial);
+        Metodo.vaciar_tble(mInit, tblFinal);
 
         DefaultTableModel dtbl1, dtbl2;
 
@@ -259,7 +279,6 @@ public class Principal extends javax.swing.JFrame {
 
         dtbl2.setColumnCount(0);
         dtbl2.setRowCount(0);
-
     }
 
     /**

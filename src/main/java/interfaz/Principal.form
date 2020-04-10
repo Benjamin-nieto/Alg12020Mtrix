@@ -115,7 +115,7 @@
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="0" y="30" width="100" height="-1"/>
+              <AbsoluteConstraints x="10" y="30" width="90" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -128,7 +128,7 @@
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="92" y="30" width="100" height="-1"/>
+              <AbsoluteConstraints x="100" y="30" width="90" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -141,7 +141,7 @@
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="184" y="30" width="99" height="-1"/>
+              <AbsoluteConstraints x="190" y="30" width="90" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -208,22 +208,23 @@
     <Component class="javax.swing.JComboBox" name="cmbOpcion">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="15">
+          <StringArray count="16">
             <StringItem index="0" value="Diagonal Principal."/>
             <StringItem index="1" value="Diagonal Secundaria."/>
             <StringItem index="2" value="Triangular superior."/>
-            <StringItem index="3" value="Transpuesta."/>
-            <StringItem index="4" value="Formar letra A."/>
-            <StringItem index="5" value="Formar letra Z."/>
-            <StringItem index="6" value="Formar letra T."/>
-            <StringItem index="7" value="Formar letra V."/>
-            <StringItem index="8" value="Formar letra E."/>
-            <StringItem index="9" value="Formar letra F."/>
-            <StringItem index="10" value="Formar letra P."/>
-            <StringItem index="11" value="Formar letra I."/>
-            <StringItem index="12" value="Formar letra N."/>
-            <StringItem index="13" value="Formar letra Y."/>
-            <StringItem index="14" value="Formar letra X."/>
+            <StringItem index="3" value="Triangular inferior."/>
+            <StringItem index="4" value="Transpuesta."/>
+            <StringItem index="5" value="Formar letra A."/>
+            <StringItem index="6" value="Formar letra Z."/>
+            <StringItem index="7" value="Formar letra T."/>
+            <StringItem index="8" value="Formar letra V."/>
+            <StringItem index="9" value="Formar letra E."/>
+            <StringItem index="10" value="Formar letra F."/>
+            <StringItem index="11" value="Formar letra P."/>
+            <StringItem index="12" value="Formar letra I."/>
+            <StringItem index="13" value="Formar letra N."/>
+            <StringItem index="14" value="Formar letra Y."/>
+            <StringItem index="15" value="Formar letra X."/>
           </StringArray>
         </Property>
       </Properties>

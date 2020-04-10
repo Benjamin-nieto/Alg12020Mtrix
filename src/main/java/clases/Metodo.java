@@ -12,8 +12,6 @@ import javax.swing.JTable;
  * @author erichaag
  */
 public class Metodo {
-    
-
 
     public static int[][] matriz_aleatoria(int filas, int cols) {
         int[][] m = new int[filas][cols];
@@ -32,43 +30,70 @@ public class Metodo {
 
         for (int i = 0; i < m.length; i++) {
             for (int j = 0; j < m[0].length; j++) {
-                if (m[i][j]!=0) {
+                if (m[i][j] != 0) {
                     table.setValueAt(m[i][j], i, j);
-      
+
                 }
-                
+
             }
         }
 
     }
-    
-    public static int[][] diag_principal(int[][] m){
-        // recibe matriz y saca la diagonal para devolverla
-        int[][] nw= new int[m.length][m[0].length];
-        for (int i = 0; i < m.length; i++) { // filas
-            for (int j = 0; j < m[0].length; j++) { // columnas
-                if (m[i]==m[j]) {
-                    nw[i][j]=m[i][j];
-                }
-                
+
+    public static void vaciar_tble(int[][] m, JTable table) {
+
+        for (int i = 0; i < m.length; i++) {
+            for (int j = 0; j < m[0].length; j++) {
+                table.setValueAt("", i, j);
             }
         }
-        return nw;
-    }
-   
-    public static int[][] diag_sec(int[][] m){
-        // recibe matriz y saca la diagonal para devolverla
-        int[][] nw= new int[m.length][m[0].length];
-        
-        for (int i = 0; i < m.length; i++) { // filas
-            for (int j = 0; j < m[0].length; j++) { // columnas
-               // if (m[j]==aux) {
-                    nw[i][j]=m[i][j];
-                //}
-                
-            }
-        }
-        return nw;
+
     }
 
+    public static void diag_principal(int[][] m, JTable table) {
+        for (int i = 0; i < m.length; i++) { // filas
+            for (int j = 0; j < m[0].length; j++) { // columnas
+                if (i == j) {
+                    table.setValueAt(m[i][j], i, j);
+                }
+
+            }
+        }
+    }
+
+    public static void diag_sec(int[][] m, JTable table) {
+
+        for (int i = 0; i < m.length; i++) { // filas
+            for (int j = 0; j < m[0].length; j++) { // columnas
+                if (i + j == m.length - 1) {
+                    table.setValueAt(m[i][j], i, j);
+                }
+
+            }
+        }
+    }
+
+    public static void triangular_sup(int[][] m, JTable table) {
+
+        for (int i = 0; i < m.length; i++) { // filas
+            for (int j = 0; j < m[0].length; j++) { // columnas
+                if (i == j || j > i) {
+                    table.setValueAt(m[i][j], i, j);
+                }
+
+            }
+        }
+    }
+
+    public static void triangular_inf(int[][] m, JTable table) {
+
+        for (int i = 0; i < m.length; i++) { // filas
+            for (int j = 0; j < m[0].length; j++) { // columnas
+                if (i == j || j < i) {
+                    table.setValueAt(m[i][j], i, j);
+                }
+
+            }
+        }
+    }
 }
