@@ -245,12 +245,23 @@ public class Principal extends javax.swing.JFrame {
                     break;
                 }
             case 5: // Letra A
-                if (cols == row) {
+                if (cols >= 4 && row >= 4) {
                     int[][] trans = mInit;
                     Metodo.letraA(trans, tblFinal);
                     break;
                 } else {
-                    JOptionPane.showMessageDialog(this, "cantidad de columnas y filas diferentes.\n", "Columnas y filas", NORMAL);
+                    JOptionPane.showMessageDialog(this, "cantidad de columnas y filas diferentes.\n debe tener como minino "
+                            + "tamaño de 4X4", "Columnas y filas", NORMAL);
+                    break;
+                }
+            case 6: // Letra Z
+                if (cols >= 3 && row >= 3) {
+                    int[][] trans = mInit;
+                    Metodo.letraZ(trans, tblFinal);
+                    break;
+                } else {
+                    JOptionPane.showMessageDialog(this, "cantidad de columnas y filas diferentes.\n debe tener como minino "
+                            + "tamaño de 4X4", "Columnas y filas", NORMAL);
                     break;
                 }
 

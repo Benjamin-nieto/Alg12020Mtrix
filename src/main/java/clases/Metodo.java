@@ -110,15 +110,32 @@ public class Metodo {
     }
 
     public static void letraA(int[][] m, JTable table) {
+        int filas = m.length;
         for (int i = 0; i < m.length; i++) { // filas
             for (int j = 0; j < m[0].length; j++) { // columnas
-                if (i != j || i == j) {
-                    table.setValueAt(m[i][j], j, i);
+                if (i == 0 || j == 0 || i == filas-2 || j == m[0].length-1) {
+                    table.setValueAt(m[i][j], i, j);
                 }
 
             }
         }
 
     }
+    
+    public static void letraZ(int[][] m, JTable table) {
+        int filas = m.length;
+        for (int i = 0; i < m.length; i++) { // filas
+            for (int j = 0; j < m[0].length; j++) { // columnas
+                if (i == 0 || j == 0 || i == filas-1 || j == m[0].length-1) {
+                    table.setValueAt(m[i][j], i, j);
+                }
+
+            }
+        }
+
+    }
+    
+    
+    
 
 }
