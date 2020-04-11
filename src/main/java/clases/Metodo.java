@@ -288,7 +288,7 @@ public class Metodo {
         }
 
     }
-
+ 
     public static void letraY(int[][] m, JTable table) {
         int column = m[0].length;
         int row = m.length;
