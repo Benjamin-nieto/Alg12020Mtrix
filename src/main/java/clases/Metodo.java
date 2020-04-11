@@ -176,4 +176,88 @@ public class Metodo {
         }
     }
 
+    public static void letraE(int[][] m, JTable table) {
+        int row = m.length;
+        int cols = m[0].length;
+        if (row % 2 == 0) { // si es par
+            row = (int) (row / 2);
+            row -= 1;
+            for (int i = 0; i < m.length; i++) { // filas
+                for (int j = 0; j < m[0].length; j++) { // columnas
+                    if (i == 0 || j == 0 || i == row + 1 || i == row || i == (m.length - 1)) {
+                        table.setValueAt(m[i][j], i, j);
+                    }
+
+                }
+            }
+
+        } else { // si es impar
+            row = (int) (row / 2);
+            for (int i = 0; i < m.length; i++) { // filas
+                for (int j = 0; j < m[0].length; j++) { // columnas
+                    if (i == 0 || j == 0 || i == row || i == (m.length - 1)) {
+                        table.setValueAt(m[i][j], i, j);
+                    }
+
+                }
+            }
+        }
+    }
+
+    public static void letraF(int[][] m, JTable table) {
+        int row = m.length;
+        int cols = m[0].length;
+        if (row % 2 == 0) { // si es par
+            row = (int) (row / 2);
+            row -= 1;
+            for (int i = 0; i < m.length; i++) { // filas
+                for (int j = 0; j < m[0].length; j++) { // columnas
+                    if (i == 0 || j == 0 || i == row + 1 || i == row) {
+                        table.setValueAt(m[i][j], i, j);
+                    }
+
+                }
+            }
+
+        } else { // si es impar
+            row = (int) (row / 2);
+            for (int i = 0; i < m.length; i++) { // filas
+                for (int j = 0; j < m[0].length; j++) { // columnas
+                    if (i == 0 || j == 0 || i == row) {
+                        table.setValueAt(m[i][j], i, j);
+                    }
+
+                }
+            }
+        }
+    }
+
+    public static void letraP(int[][] m, JTable table) {
+        int row = m.length;
+        int cols = m[0].length;
+        if (row % 2 == 0) { // si es par
+            row = (int) (row / 2);
+            row -= 1;
+            for (int i = 0; i < m.length; i++) { // filas
+                for (int j = 0; j < m[0].length; j++) { // columnas
+                    if (i == 0 || j == 0 || i == row + 1 || i == row || j == (m[0].length-1)) {
+                        table.setValueAt(m[i][j], i, j);
+                    }
+
+                }
+            }
+
+        } else { // si es impar
+            row = (int) (row / 2);
+            for (int i = 0; i < m.length; i++) { // filas
+                for (int j = 0; j < m[0].length; j++) { // columnas
+                    if (i == 0 || j == 0 || i == row || j == (m[0].length-1)) {
+                        table.setValueAt(m[i][j], i, j);
+                    }
+
+                }
+            }
+        }
+    }
+
 }
