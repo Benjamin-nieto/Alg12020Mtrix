@@ -25,9 +25,11 @@ Realizar los métodos acompañados de la interfaz gráfica vista en clases que d
 ![lZ](resources/img/letraZ.png)
 
     7. Dada una matriz de n x m retorne una matriz con los elementos que conforman la letra T.
-    
+![lT](resources/img/letraT.png)
+
     8. Dada una matriz de n x m retorne una matriz con los elementos que conforman la letra V.
-    
+![lV](resources/img/letraV.png)
+
     9. Dada una matriz de n x m retorne una matriz con los elementos que conforman la letra E.
 
     10. Dada una matriz de n x m retorne una matriz con los elementos que conforman la letra F.

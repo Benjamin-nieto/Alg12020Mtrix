@@ -255,13 +255,13 @@ public class Principal extends javax.swing.JFrame {
                     break;
                 }
             case 6: // Letra Z
-                if (cols >= 3 && row >= 3) {
+                if (cols >= 4 && row >= 4 && cols == row) {
                     int[][] trans = mInit;
                     Metodo.letraZ(trans, tblFinal);
                     break;
                 } else {
-                    JOptionPane.showMessageDialog(this, "cantidad de columnas y filas diferentes.\n debe tener como minino "
-                            + "tamaño de 4X4", "Columnas y filas", NORMAL);
+                    JOptionPane.showMessageDialog(this, "Error en cantidad de columnas y filas.\n - Debe tener como minino "
+                            + "tamaño de 4X4 \n - Debe tener tener la misma cantidad de filas y columnas", "Columnas y filas", NORMAL);
                     break;
                 }
 

@@ -126,7 +126,7 @@ public class Metodo {
         int filas = m.length;
         for (int i = 0; i < m.length; i++) { // filas
             for (int j = 0; j < m[0].length; j++) { // columnas
-                if (i == 0 || j == 0 || i == filas-1 || j == m[0].length-1) {
+                if (i + j == m.length - 1 || i == 0 || i == m[0].length -1) {
                     table.setValueAt(m[i][j], i, j);
                 }
 
