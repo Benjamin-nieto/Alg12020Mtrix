@@ -235,12 +235,29 @@ public class Metodo {
     public static void letraP(int[][] m, JTable table) {
         int row = m.length;
         int cols = m[0].length;
-        if (row % 2 == 0) { // si es par
-            row = (int) (row / 2);
-            row -= 1;
+
+        row = (int) (row / 2);
+        for (int i = 0; i < m.length; i++) { // filas
+            for (int j = 0; j < m[0].length; j++) { // columnas
+                if ((i == 0 || j == 0 || i == row) || (j == m[0].length - 1 && i <= row)) {
+                    System.out.println("" + i + " = " + row);
+                    table.setValueAt(m[i][j], i, j);
+                }
+            }
+
+        }
+
+    }
+
+    public static void letraI(int[][] m, JTable table) {
+        int column = m[0].length;
+        int row = m.length - 1;
+        if (column % 2 == 0) { // si es par
+            column = (int) (column / 2);
+            column -= 1;
             for (int i = 0; i < m.length; i++) { // filas
                 for (int j = 0; j < m[0].length; j++) { // columnas
-                    if (i == 0 || j == 0 || i == row + 1 || i == row || j == (m[0].length-1)) {
+                    if (i == 0 || i == row || j == column || j == column + 1) {
                         table.setValueAt(m[i][j], i, j);
                     }
 
@@ -248,16 +265,46 @@ public class Metodo {
             }
 
         } else { // si es impar
-            row = (int) (row / 2);
+            column = (int) (column / 2);
             for (int i = 0; i < m.length; i++) { // filas
                 for (int j = 0; j < m[0].length; j++) { // columnas
-                    if (i == 0 || j == 0 || i == row || j == (m[0].length-1)) {
+                    if (i == 0 || j == column || i == row) {
                         table.setValueAt(m[i][j], i, j);
                     }
 
                 }
             }
         }
+
+    }
+
+    public static void letraN(int[][] m, JTable table) {
+        for (int i = 0; i < m.length; i++) { // filas
+            for (int j = 0; j < m[0].length; j++) { // columnas
+                if (i == j || j == 0 || j == m[0].length - 1) {
+                    table.setValueAt(m[i][j], i, j);
+                }
+
+            }
+        }
+
+    }
+
+    public static void letraY(int[][] m, JTable table) {
+
+    }
+
+    public static void letraX(int[][] m, JTable table) {
+
+        for (int i = 0; i < m.length; i++) { // filas
+            for (int j = 0; j < m[0].length; j++) { // columnas
+                if (i == j || i + j == m.length - 1) {
+                    table.setValueAt(m[i][j], i, j);
+                }
+
+            }
+        }
+
     }
 
 }

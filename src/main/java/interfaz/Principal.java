@@ -314,6 +314,47 @@ public class Principal extends javax.swing.JFrame {
                             + "", "Columnas y filas", NORMAL);
                     break;
                 }
+            case 12: // Letra I
+                if (cols >= 3 && row >= 3) {
+                    int[][] trans = mInit;
+                    Metodo.letraI(trans, tblFinal);
+                    break;
+                } else {
+                    JOptionPane.showMessageDialog(this, "Error en cantidad de columnas y filas.\n - Debe tener como minino tamaño de 3 filas y 3 columnas \n"
+                            + "", "Columnas y filas", NORMAL);
+                    break;
+                }
+            case 13: // Letra N
+                if (cols >= 3 && row >= 2) {
+                    int[][] trans = mInit;
+                    Metodo.letraN(trans, tblFinal);
+                    break;
+                } else {
+                    JOptionPane.showMessageDialog(this, "Error en cantidad de columnas y filas.\n - Debe tener como minino tamaño de 2 filas y 3 columnas \n"
+                            + "", "Columnas y filas", NORMAL);
+                    break;
+                }
+
+            case 14: // Letra Y
+                if (cols >= 3 && row >= 2) {
+                    int[][] trans = mInit;
+                    Metodo.letraY(trans, tblFinal);
+                    break;
+                } else {
+                    JOptionPane.showMessageDialog(this, "Error en cantidad de columnas y filas.\n - Debe tener como minino tamaño de 2 filas y 3 columnas \n"
+                            + "", "Columnas y filas", NORMAL);
+                    break;
+                }
+            case 15: // Letra X
+                if (cols >= 3 && row >= 3 && cols == row) {
+                    int[][] trans = mInit;
+                    Metodo.letraX(trans, tblFinal);
+                    break;
+                } else {
+                    JOptionPane.showMessageDialog(this, "Error en cantidad de columnas y filas.\n - Debe tener como minino tamaño de 2 filas y 3 columnas \n"
+                            + "", "Columnas y filas", NORMAL);
+                    break;
+                }
         }
     }//GEN-LAST:event_btnAccionActionPerformed
 
