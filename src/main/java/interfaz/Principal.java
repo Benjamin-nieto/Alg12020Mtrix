@@ -41,13 +41,12 @@ public class Principal extends javax.swing.JFrame {
         btnLlenar = new javax.swing.JButton();
         btnLimpiar = new javax.swing.JButton();
         lbl1 = new javax.swing.JLabel();
-        jPanel5 = new javax.swing.JPanel();
-        btnAccion = new javax.swing.JButton();
-        cmbOpcion = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblInicial = new javax.swing.JTable();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblFinal = new javax.swing.JTable();
+        cmbOpcion = new javax.swing.JComboBox<>();
+        btnAccion = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -115,17 +114,6 @@ public class Principal extends javax.swing.JFrame {
         lbl1.setText("Manejo de matrices");
         getContentPane().add(lbl1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 20, -1, -1));
 
-        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-
-        btnAccion.setText("Acción");
-        btnAccion.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAccionActionPerformed(evt);
-            }
-        });
-
-        cmbOpcion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Diagonal Principal.", "Diagonal Secundaria.", "Triangular superior.", "Triangular inferior.", "Transpuesta.", "Formar letra A.", "Formar letra Z.", "Formar letra T.", "Formar letra V.", "Formar letra E.", "Formar letra F.", "Formar letra P.", "Formar letra I.", "Formar letra N.", "Formar letra Y.", "Formar letra X." }));
-
         tblInicial.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -134,8 +122,9 @@ public class Principal extends javax.swing.JFrame {
 
             }
         ));
-        tblInicial.setSize(new java.awt.Dimension(100, 100));
         jScrollPane1.setViewportView(tblInicial);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 210, 230));
 
         tblFinal.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -145,41 +134,20 @@ public class Principal extends javax.swing.JFrame {
 
             }
         ));
-        tblFinal.setSize(new java.awt.Dimension(200, 100));
         jScrollPane2.setViewportView(tblFinal);
 
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cmbOpcion, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addComponent(btnAccion)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(14, 14, 14))
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addComponent(cmbOpcion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(56, 56, 56)
-                        .addComponent(btnAccion)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 160, 190, 230));
 
-        getContentPane().add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 590, 270));
+        cmbOpcion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Diagonal Principal.", "Diagonal Secundaria.", "Triangular superior.", "Triangular inferior.", "Transpuesta.", "Formar letra A.", "Formar letra Z.", "Formar letra T.", "Formar letra V.", "Formar letra E.", "Formar letra F.", "Formar letra P.", "Formar letra I.", "Formar letra N.", "Formar letra Y.", "Formar letra X." }));
+        getContentPane().add(cmbOpcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 180, 180, -1));
+
+        btnAccion.setText("Acción");
+        btnAccion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAccionActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnAccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 220, 120, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -476,7 +444,6 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel label1;
