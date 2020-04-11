@@ -305,12 +305,12 @@ public class Principal extends javax.swing.JFrame {
                     break;
                 }
             case 11: // Letra P
-                if (cols >= 3 && row >= 4) {
+                if (cols >= 3 && row >= 2) {
                     int[][] trans = mInit;
                     Metodo.letraP(trans, tblFinal);
                     break;
                 } else {
-                    JOptionPane.showMessageDialog(this, "Error en cantidad de columnas y filas.\n - Debe tener como minino tamaño de 4 filas y 3 columnas \n"
+                    JOptionPane.showMessageDialog(this, "Error en cantidad de columnas y filas.\n - Debe tener como minino tamaño de 2 filas y 3 columnas \n"
                             + "", "Columnas y filas", NORMAL);
                     break;
                 }
@@ -325,23 +325,23 @@ public class Principal extends javax.swing.JFrame {
                     break;
                 }
             case 13: // Letra N
-                if (cols >= 3 && row >= 3) {
+                if (cols >= 3 && row >= 2) {
                     int[][] trans = mInit;
                     Metodo.letraN(trans, tblFinal);
                     break;
                 } else {
-                    JOptionPane.showMessageDialog(this, "Error en cantidad de columnas y filas.\n - Debe tener como minino tamaño de 3 filas y 3 columnas \n"
+                    JOptionPane.showMessageDialog(this, "Error en cantidad de columnas y filas.\n - Debe tener como minino tamaño de 2 filas y 3 columnas \n"
                             + "", "Columnas y filas", NORMAL);
                     break;
                 }
 
             case 14: // Letra Y
-                if (cols >= 3 && row >= 3 && cols == row) {
+                if (cols >= 3 && row >= 2) {
                     int[][] trans = mInit;
                     Metodo.letraY(trans, tblFinal);
                     break;
                 } else {
-                    JOptionPane.showMessageDialog(this, "Error en cantidad de columnas y filas.\n - Debe tener como minino tamaño de 3 filas y 3 columnas \n"
+                    JOptionPane.showMessageDialog(this, "Error en cantidad de columnas y filas.\n - Debe tener como minino tamaño de 2 filas y 3 columnas \n"
                             + "", "Columnas y filas", NORMAL);
                     break;
                 }
@@ -351,8 +351,8 @@ public class Principal extends javax.swing.JFrame {
                     Metodo.letraX(trans, tblFinal);
                     break;
                 } else {
-                    JOptionPane.showMessageDialog(this, "Error en cantidad de columnas y filas.\n - Debe tener como minino tamaño de 3 filas y 3 columnas \n"
-                            + "- debe tener la misma cantidad de filas y columnas", "Columnas y filas", NORMAL);
+                    JOptionPane.showMessageDialog(this, "Error en cantidad de columnas y filas.\n - Debe tener como minino tamaño de 2 filas y 3 columnas \n"
+                            + "", "Columnas y filas", NORMAL);
                     break;
                 }
         }
