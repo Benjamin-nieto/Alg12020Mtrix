@@ -264,7 +264,26 @@ public class Principal extends javax.swing.JFrame {
                             + "tamaño de 4X4 \n - Debe tener tener la misma cantidad de filas y columnas", "Columnas y filas", NORMAL);
                     break;
                 }
-
+            case 7: // Letra T
+                if (cols >= 3 && row >= 2) {
+                    int[][] trans = mInit;
+                    Metodo.letraT(trans, tblFinal);
+                    break;
+                } else {
+                    JOptionPane.showMessageDialog(this, "Error en cantidad de columnas y filas.\n - Debe tener como minino tamaño de 2 filas y 3 columnas \n"
+                            + "", "Columnas y filas", NORMAL);
+                    break;
+                }
+            case 8: // Letra V
+                if (cols >= 3 && row >= 2) {
+                    int[][] trans = mInit;
+                    Metodo.letraV(trans, tblFinal);
+                    break;
+                } else {
+                    JOptionPane.showMessageDialog(this, "Error en cantidad de columnas y filas.\n - Debe tener como minino tamaño de 2 filas y 3 columnas \n"
+                            + "", "Columnas y filas", NORMAL);
+                    break;
+                }
         }
     }//GEN-LAST:event_btnAccionActionPerformed
 
