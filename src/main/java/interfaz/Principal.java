@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
-/** 
+/**
  *
  * @author Bnieto
  */
@@ -40,13 +40,13 @@ public class Principal extends javax.swing.JFrame {
         btnCrear = new javax.swing.JButton();
         btnLlenar = new javax.swing.JButton();
         btnLimpiar = new javax.swing.JButton();
+        cmbOpcion = new javax.swing.JComboBox<>();
+        btnAccion = new javax.swing.JButton();
         lbl1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblInicial = new javax.swing.JTable();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblFinal = new javax.swing.JTable();
-        cmbOpcion = new javax.swing.JComboBox<>();
-        btnAccion = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -79,7 +79,7 @@ public class Principal extends javax.swing.JFrame {
         });
         jPanel1.add(txtColumn, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 32, 80, 30));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 290, 90));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 370, 110));
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Opciones"));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -90,7 +90,7 @@ public class Principal extends javax.swing.JFrame {
                 btnCrearActionPerformed(evt);
             }
         });
-        jPanel2.add(btnCrear, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 90, -1));
+        jPanel2.add(btnCrear, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 90, -1));
 
         btnLlenar.setText("Llenar");
         btnLlenar.addActionListener(new java.awt.event.ActionListener() {
@@ -98,7 +98,7 @@ public class Principal extends javax.swing.JFrame {
                 btnLlenarActionPerformed(evt);
             }
         });
-        jPanel2.add(btnLlenar, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, 90, -1));
+        jPanel2.add(btnLlenar, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 20, 90, -1));
 
         btnLimpiar.setText("Limpiar");
         btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
@@ -106,13 +106,24 @@ public class Principal extends javax.swing.JFrame {
                 btnLimpiarActionPerformed(evt);
             }
         });
-        jPanel2.add(btnLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 30, 90, -1));
+        jPanel2.add(btnLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, 90, -1));
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 60, 290, 90));
+        cmbOpcion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Diagonal Principal.", "Diagonal Secundaria.", "Triangular superior.", "Triangular inferior.", "Transpuesta.", "Formar letra A.", "Formar letra Z.", "Formar letra T.", "Formar letra V.", "Formar letra E.", "Formar letra F.", "Formar letra P.", "Formar letra I.", "Formar letra N.", "Formar letra Y.", "Formar letra X.", "Formar tablero ajedrez.", "Formar M.", "Formar rombo hueco.", "Formar letra B." }));
+        jPanel2.add(cmbOpcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 180, -1));
+
+        btnAccion.setText("Acción");
+        btnAccion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAccionActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnAccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 50, 120, -1));
+
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 40, 410, 110));
 
         lbl1.setFont(new java.awt.Font("Lucida Grande", 1, 17)); // NOI18N
         lbl1.setText("Manejo de matrices");
-        getContentPane().add(lbl1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 20, -1, -1));
+        getContentPane().add(lbl1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
         tblInicial.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -124,7 +135,7 @@ public class Principal extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tblInicial);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 210, 230));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 360, 340));
 
         tblFinal.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -136,18 +147,7 @@ public class Principal extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(tblFinal);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 160, 190, 230));
-
-        cmbOpcion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Diagonal Principal.", "Diagonal Secundaria.", "Triangular superior.", "Triangular inferior.", "Transpuesta.", "Formar letra A.", "Formar letra Z.", "Formar letra T.", "Formar letra V.", "Formar letra E.", "Formar letra F.", "Formar letra P.", "Formar letra I.", "Formar letra N.", "Formar letra Y.", "Formar letra X." }));
-        getContentPane().add(cmbOpcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 180, 180, -1));
-
-        btnAccion.setText("Acción");
-        btnAccion.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAccionActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnAccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 220, 120, -1));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 160, 420, 340));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -353,6 +353,43 @@ public class Principal extends javax.swing.JFrame {
                 } else {
                     JOptionPane.showMessageDialog(this, "Error en cantidad de columnas y filas.\n - Debe tener como minino tamaño de 3 filas y 3 columnas \n"
                             + "- debe tener la misma cantidad de filas y columnas", "Columnas y filas", NORMAL);
+                    break;
+                }
+            case 16: // ajedrez
+                if (cols >= 2 && row >= 2) {
+                    int[][] diags = mInit;
+                    Metodo.ajedrez(diags, tblFinal);
+                    break;
+                } else {
+                    JOptionPane.showMessageDialog(this, "Cantidad de columnas y filas insuficientes.\n - Debe tener minimo tamaño de 2X2", "Columnas y filas", NORMAL);
+                    break;
+                }
+
+            case 17: // letraM
+                if (cols >= 5 && row >= 5 && cols == row) {
+                    int[][] diags = mInit;
+                    Metodo.letraM(diags, tblFinal);
+                    break;
+                } else {
+                    JOptionPane.showMessageDialog(this, "Cantidad de columnas y filas insuficientes.\n - Debe tener minimo tamaño de 5x5 \n - Debe tener la misma cantidad de filas y columnas", "Columnas y filas", NORMAL);
+                    break;
+                }
+            case 18: // cubo hueco
+                if (cols == row && cols % 2 != 0 && cols >= 3) {
+                    int[][] diags = mInit;
+                    Metodo.cuboH(diags, tblFinal);
+                    break;
+                } else {
+                    JOptionPane.showMessageDialog(this, "Cantidad de columnas y filas debe ser igual e impar.\n - Debe tener minimo tamaño de 3x3 \n - Debe ser impar los valores de filas y columnas.", "Columnas y filas", NORMAL);
+                    break;
+                }
+            case 19: // letra B
+                if (cols >= 3 && row >= 5) {
+                    int[][] diags = mInit;
+                    Metodo.letraB(diags, tblFinal);
+                    break;
+                } else {
+                    JOptionPane.showMessageDialog(this, "Cantidad de columnas y filas erroneas .\n - Debe tener minimo tamaño de 3x5 \n - Debe ser impar los valores de filas y columnas.", "Columnas y filas", NORMAL);
                     break;
                 }
         }

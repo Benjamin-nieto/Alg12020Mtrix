@@ -9,7 +9,7 @@ import javax.swing.JTable;
 
 /**
  *
- * @author erichaag
+ * @author Bnieto
  */
 public class Metodo {
 
@@ -288,7 +288,7 @@ public class Metodo {
         }
 
     }
- 
+
     public static void letraY(int[][] m, JTable table) {
         int column = m[0].length;
         int row = m.length;
@@ -332,6 +332,121 @@ public class Metodo {
             }
         }
 
+    }
+
+    //----- quiz de matriz --------
+    public static void ajedrez(int[][] m, JTable table) {
+        for (int i = 0; i < m.length; i++) { // filas
+            for (int j = 0; j < m[0].length; j++) { // columnas
+                if ((i + j) % 2 == 0) {
+                    table.setValueAt("", i, j);
+                } else {
+                    table.setValueAt(m[i][j], i, j);
+                }
+
+            }
+        }
+    }
+
+    public static void letraM(int[][] m, JTable table) {
+        int row = m.length;
+        int column = m[0].length;
+
+        if (column % 2 == 0) { // si es par
+            column = (int) (column / 2);
+            row = (int) (row / 2);
+            column -= 1;
+
+            for (int i = 0; i < m.length; i++) { // filas
+                for (int j = 0; j < m[0].length; j++) { // columnas
+                    if ((j == m[0].length - 1) || (j == 0) || (j == m[0].length + 1 && i > m[0].length - 1) || (i == j && i <= row) || (i + j == m.length - 1 && i <= row)) {
+                        table.setValueAt(m[i][j], i, j);
+                    }
+
+                }
+            }
+
+        } else { // si es impar
+            column = (int) (column / 2); // mitad columnas
+            row = (int) (row / 2);
+            for (int i = 0; i < m.length; i++) { // filas
+                for (int j = 0; j < m[0].length; j++) { // columnas 
+                    if ((j == m[0].length - 1) || (j == 0) || (i == j && i <= row - 1) || (i + j == m.length - 1 && i <= row)) {
+                        table.setValueAt(m[i][j], i, j);
+                    }
+
+                }
+            }
+        }
+    }
+
+    public static void cuboH(int[][] m, JTable table) {
+        int row = m.length;
+        int cols = m[0].length;
+
+        int midrow = (row / 2);
+        for (int i = 0; i < m.length; i++) { // filas
+            for (int j = 0; j < m[0].length; j++) { // columnas 
+                if ((i + j == midrow) || (i - j == midrow) || (j - i == midrow) || (i + j == (midrow * 3))) {
+                    table.setValueAt(m[i][j], i, j);
+
+                }
+
+            }
+        }
+
+    }
+
+    public static void letraB(int[][] m, JTable table) {
+        int row = m.length;
+        int cols = m[0].length;
+        System.out.println("" + cols);
+        if (row % 2 == 0) { // si es par
+            row = (int) (row / 2);
+            row -= 1;
+            for (int i = 0; i < m.length; i++) { // filas
+                for (int j = 0; j < m[0].length; j++) { // columnas
+                    if ((j == cols - 1) || (i == 0 && j != cols - 1) || (j == 0) || (i == row && j != cols - 1) || (i == row + 1 && j != cols - 1) || (i == m.length - 1 && j != cols - 1)) {
+                        table.setValueAt(m[i][j], i, j);
+                    }
+
+                }
+            }
+            /**
+             * ULTIMA COLUMNA*
+             */
+            for (int i = 0; i < m.length; i++) { // filas
+                for (int j = 0; j < m[0].length; j++) { // columnas
+                    if ((j == cols - 1 && i == 0) || (j == cols - 1 && i == row) || (j == cols - 1 && i == row + 1) || (j == cols - 1 && i == m.length - 1)) {
+                        table.setValueAt("", i, j);
+                    }
+
+                }
+            }
+
+        } else { // si es impar
+            row = (int) (row / 2);
+            for (int i = 0; i < m.length; i++) { // filas
+                for (int j = 0; j < m[0].length; j++) { // columnas
+                    if ((j == cols - 1) || (i == 0 && j != cols - 1) || (j == 0) || (i == row && j != cols - 1) || (i == m.length - 1 && j != cols - 1)) {
+                        table.setValueAt(m[i][j], i, j);
+                    }
+
+                }
+            }
+            /**
+             * ULTIMA COLUMNA*
+             */
+            for (int i = 0; i < m.length; i++) { // filas
+                for (int j = 0; j < m[0].length; j++) { // columnas
+                    if ((j == cols - 1 && i == 0) || (j == cols - 1 && i == row) || (j == cols - 1 && i == m.length - 1)) {
+                        table.setValueAt("", i, j);
+                    }
+
+                }
+            }
+
+        }
     }
 
 }

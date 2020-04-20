@@ -51,4 +51,17 @@ Realizar los métodos acompañados de la interfaz gráfica vista en clases que d
     15. Dada una matriz de n x m retorne una matriz con los elementos que conforman la letra X.
 ![lX](resources/img/letraX.png)
 
+    16. Dada una matriz de n x m retorne una matriz con los elementos que conforman un ajedrez.
+![ajeZ](resources/img/ajedrez.png)
+
+    17. Dada una matriz de n x m retorne una matriz con los elementos que conforman la letra M.
+![lM](resources/img/letraM.png)
+
+    18. Dada una matriz de n x m retorne una matriz con los elementos que conforman un rombo hueco.
+![romH](resources/img/romboH.png)
+
 ---
+    19. Dada una matriz de n x m retorne una matriz con los elementos que conforman la letra B.
+![lB](resources/img/letraB.png)
+
+    20. Dada una matriz de n x m retorne una matriz con los elementos que conforman la letra B.
