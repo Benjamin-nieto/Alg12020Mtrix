@@ -58,10 +58,9 @@ Realizar los métodos acompañados de la interfaz gráfica vista en clases que d
 ![lM](resources/img/letraM.png)
 
     18. Dada una matriz de n x m retorne una matriz con los elementos que conforman un rombo hueco.
-![romH](resources/img/romboH.png)
+![romH](resources/img/RomboH.png)
 
----
     19. Dada una matriz de n x m retorne una matriz con los elementos que conforman la letra B.
-![lB](resources/img/letraB.png)
+![lB](resources/img/LetraB.png)
 
     20. Dada una matriz de n x m retorne una matriz con los elementos que conforman la letra B.
